@@ -1,7 +1,18 @@
 ﻿// Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
+
+int[] GetRandomArray(int size, int min, int max)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(min, max + 1);
+    }
+    return array;
+}
+
 Console.Clear();
-int[] array = Random(10,1,100);
+int[] array = GetRandomArray(10,1,100);
 Console.WriteLine($"[{String.Join(", ", array)}]");
 int min = array[0];
 int max = array[0];
